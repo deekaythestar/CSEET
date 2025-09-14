@@ -1,0 +1,3365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<style>
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+  #print-section, #print-section * {
+    visibility: visible !important;
+  }
+  #print-section {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    color: black;
+  }
+  #print-section .question {
+    width: 100% !important;
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 8px;
+  }
+  #print-section .question-text {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    white-space: normal !important;
+  }
+  #print-section .options {
+    display: block;
+    margin-left: 15px;
+  }
+  #print-section .option {
+    display: block;
+    margin-bottom: 2px;
+  }
+  #print-section .answer {
+    display: block;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+}
+</style>
+
+<style>
+@media print {
+  /* Use system fonts for clean PDF copy */
+  #print-section {
+    font-family: "Courier New", Courier, Arial, sans-serif !important;
+    line-height: 1.4 !important;
+    margin: 0 auto;
+  }
+
+  /* Consistent spacing & dividers */
+  #print-section .question {
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #aaa;
+    page-break-inside: avoid;
+  }
+
+  /* Page numbers */
+  @page {
+    margin: 20mm;
+  }
+  @page :footer {
+    content: "Page " counter(page) " of " counter(pages);
+  }
+
+  /* Force plain text for options & answers */
+  #print-section .option, 
+  #print-section .answer {
+    font-family: "Courier New", Courier, monospace !important;
+  }
+}
+</style>
+
+<style>
+@media print {
+  #print-section {
+    display: block !important;
+    width: auto !important;
+    margin: 0 auto !important;
+    font-family: monospace, Arial, sans-serif;
+  }
+  #print-section .question-text,
+  #print-section .option,
+  #print-section .answer {
+    max-width: 70ch !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+  }
+}
+</style>
+
+<style>
+@media print {
+  #print-section,
+  #print-section * {
+    display: block !important;
+    width: 75ch !important;
+    max-width: 75ch !important;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+  }
+}
+</style>
+
+<style>
+@media print {
+  #print-section,
+  #print-section * {
+    display: block !important;
+    float: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    word-wrap: break-word !important;
+  }
+}
+</style>
+
+<style>
+@media print {
+  #print-section,
+  #print-section * {
+    width: 100% !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    word-wrap: break-word !important;
+  }
+}
+</style>
+
+<style>
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #print-section, #print-section * {
+    visibility: visible;
+  }
+  #print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    color: black;
+  }
+  #print-section h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  #print-section .question {
+    margin-bottom: 15px;
+    page-break-inside: avoid;
+  }
+  #print-section .question-text {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  #print-section .option {
+    margin-left: 20px;
+  }
+  #print-section .answer {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+}
+</style>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CSEET e-BULLETIN JULY 2025 22_MCQs</title>
+<style>
+    /* ALL ORIGINAL CSS REMAINS EXACTLY THE SAME */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+        background-color: white;
+    }
+    #readAllAnswersBtn { /* Removed showResultBtn from this rule */
+        width: auto;
+        padding: 8px;
+        font-size: 18px;
+    }
+    h1 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+        color: #333;
+    }
+    h2 {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+    h3 {
+        color: DeepPink;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        /* Added flex properties to h3 to align with score and test result */
+        display: flex;
+        align-items: center;
+        justify-content: space-between; /* Distribute space between items */
+        flex-wrap: wrap; /* Allow items to wrap on small screens */
+    }
+    /* NEW CSS for Score and Test Result button alignment */
+    h3 #score-display-inside-h3 {
+        font-size: 20px;
+        font-weight: bold;
+        color: green;
+        margin-left: auto; /* Push to the right */
+        flex-shrink: 0;
+         margin-right: 10px; /* Add some space between score and button */
+    }
+     h3 #showResultBtn-inside-h3 {
+        width: auto;
+        padding: 8px;
+        font-size: 18px;
+         margin-left: 0; /* Reset margin-left from original rule */
+         flex-shrink: 0;
+     }
+
+    .question-parts-container {
+        margin: 0;
+        padding: 0;
+    }
+    .question-parts-container p {
+        margin: 0;
+        padding: 0;
+        color: SlateBlue;
+        font-size: 20px;
+        line-height: 1.4;
+    }
+    .question-parts-container p:first-child {
+        margin-bottom: 5px;
+    }
+    .hidden {
+        display: none;
+    }
+    .answer {
+        margin: 8px 0;
+        text-align: justify;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        background-color: #fff;
+        transition: background-color 0.2s ease;
+    }
+    .answer:hover:not(.selected):not(.correct):not(.incorrect) {
+        background-color: #e9e9e9;
+    }
+    .selected {
+        background-color: lightblue;
+    }
+    .correct {
+        background-color: lightgreen;
+        border-color: green;
+    }
+    .incorrect {
+        background-color: #ff8b8b;
+        border-color: red;
+    }
+    #controls {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .control-row {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+    }
+    input[type="text"],
+    input[type="number"] {
+        width: 80px;
+        padding: 10px;
+        font-size: 18px;
+        border-radius: 10px;
+        border: 1px solid #ccc;
+        text-align: center;
+        box-sizing: border-box;
+        flex-shrink: 0;
+    }
+    input::placeholder {
+        color: #888;
+        opacity: 1;
+    }
+    .center {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        font-size: 16px;
+    }
+    button {
+        padding: 10px 18px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 8px;
+        border: none;
+        background: #ff9800;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        flex-shrink: 0;
+    }
+    button:hover:not(:disabled) {
+        background: #e65100;
+    }
+    button:disabled {
+        background: #ccc;
+        cursor: not-allowed;
+    }
+    /* Removed original #score-display and #showResultBtn styles */
+    #login-section {
+        max-width: 600px;
+        margin: 80px auto;
+        padding: 30px;
+        border: 2px solid #ccc;
+        border-radius: 25px;
+        text-align: center;
+        background: linear-gradient(to bottom right, #1e90ff, #87cefa);
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+        color: white;
+    }
+    #quiz-section {
+        max-width: 800px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .passages {
+        margin-top: 20px;
+        color: black;
+        font-size: 18px;
+        text-align: justify;
+    }
+    #result-message {
+        font-size: 24px;
+        color: green;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+    }
+    #pauseAudioBtn {
+        background-color: #007bff;
+    }
+    #pauseAudioBtn:hover:not(:disabled) {
+        background-color: #0056b3;
+    }
+    #breakBtn {
+        background-color: #dc3545;
+    }
+    #breakBtn:hover:not(:disabled) {
+        background-color: #c82333;
+    }
+    #showAnswersBtn { /* Green color */
+        background-color: #28a745;
+    }
+    #showAnswersBtn:hover:not(:disabled) { /* Darker green */
+        background-color: #218838;
+    }
+    #question-image {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    #question-image img {
+        max-width: 100%;
+        height: auto;
+        display: inline-block;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    #correct-answer-message {
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: justify;
+    }
+    #goto-control-group {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+    #goto-control-group input[type="number"] {
+        order: 2;
+        width: 60px;
+        text-align: left;
+    }
+    #goto-control-group button {
+        order: 1;
+        width: auto;
+    }
+    /* --- START: Adjustments for Button Width --- */
+    #controls .control-row {
+        /* Use flex-grow to make buttons fill space, but allow wrap */
+        flex-wrap: wrap;
+        gap: 10px; /* Maintain gap between buttons */
+    }
+
+    #controls .control-row button {
+        flex-grow: 1; /* Allow buttons to grow and fill space */
+        min-width: 100px; /* Ensure a minimum width */
+        box-sizing: border-box; /* Include padding and border in the element's total width */
+    }
+
+    #goto-control-group {
+         /* Keep Go and Q# together */
+         flex-grow: 1; /* Allow the group to grow */
+         display: flex; /* Ensure flex behavior within the group */
+         gap: 5px; /* Gap between Go button and input */
+         align-items: center; /* Align items vertically */
+    }
+
+     #goto-control-group button {
+        flex-grow: 0; /* Prevent the 'Go' button from growing excessively */
+        width: auto; /* Let the content determine width */
+        min-width: auto; /* Remove min-width inherited from control-row button */
+     }
+
+     #goto-control-group input[type="number"] {
+         flex-grow: 1; /* Allow the input to grow and fill remaining space */
+         width: auto; /* Override fixed width */
+         min-width: 60px; /* Ensure a minimum width for the input */
+     }
+
+    /* --- END: Adjustments for Button Width --- */
+
+    /* NEW CSS FOR IMPROVEMENTS */
+    /* Progress Bar */
+    #progress-container {
+        width: 100%;
+        background-color: #f3f3f3;
+        border-radius: 4px;
+        margin: 15px 0;
+    }
+    
+    #progress-bar {
+        height: 20px;
+        background-color: #4CAF50;
+        border-radius: 4px;
+        width: 0%;
+        transition: width 0.3s;
+    }
+    
+    /* Completion Message */
+    #completion-message {
+        margin-top: 10px;
+        padding: 10px;
+        background-color: #e8f5e9;
+        border-left: 4px solid #4CAF50;
+        border-radius: 4px;
+        font-weight: bold;
+        color: #2e7d32;
+        display: none;
+        text-align: center;
+    }
+    
+    /* Zoom Control */
+    #zoom-container {
+        margin: 15px 0;
+        padding: 10px;
+        background-color: #f8f9fa;
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    #zoom-slider {
+        flex-grow: 1;
+        height: 8px;
+        -webkit-appearance: none;
+        appearance: none;
+        background: #ddd;
+        border-radius: 5px;
+        outline: none;
+    }
+    
+    #zoom-slider::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        background: #4CAF50;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    
+    #zoom-slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        background: #4CAF50;
+        border-radius: 50%;
+        cursor: pointer;
+        border: none;
+    }
+    
+    #zoom-value {
+        min-width: 50px;
+        text-align: center;
+        font-weight: bold;
+        color: #333;
+    }
+    
+    #zoom-reset {
+        background-color: #6c757d;
+        padding: 5px 10px;
+        font-size: 14px;
+        min-width: auto;
+    }
+    
+    #zoom-reset:hover {
+        background-color: #5a6268;
+    }
+    
+    /* Theme Styles */
+    /* Original Light Theme (default) */
+    body.theme-light {
+        background-color: white;
+        color: #333;
+    }
+    
+    body.theme-light #quiz-section {
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    body.theme-light .answer {
+        background-color: #fff;
+        border-color: #ccc;
+        color: #333;
+    }
+    
+    body.theme-light .question-parts-container p {
+        color: SlateBlue;
+    }
+    
+    body.theme-light h3 {
+        color: DeepPink;
+    }
+    
+    body.theme-light #completion-message {
+        background-color: #e8f5e9;
+        border-left-color: #4CAF50;
+        color: #2e7d32;
+    }
+    
+    body.theme-light #hint-container {
+        background-color: #fff3cd;
+        border-color: #ffeeba;
+        color: #856404;
+    }
+    
+    body.theme-light #login-section {
+        background: linear-gradient(to bottom right, #1e90ff, #87cefa);
+        color: white;
+    }
+    
+    body.theme-light #zoom-container {
+        background-color: #f8f9fa;
+    }
+    
+    /* Dark Theme */
+    body.theme-dark {
+        background-color: #121212;
+        color: #e0e0e0;
+    }
+    
+    body.theme-dark #quiz-section {
+        background-color: #1e1e1e;
+        box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+    }
+    
+    body.theme-dark .answer {
+        background-color: #2c2c2c;
+        border-color: #444;
+        color: #e0e0e0;
+    }
+    
+    body.theme-dark .question-parts-container p {
+        color: #bb86fc;
+    }
+    
+    body.theme-dark h3 {
+        color: #cf6679;
+    }
+    
+    body.theme-dark #completion-message {
+        background-color: #1b5e20;
+        border-left-color: #4caf50;
+        color: #a5d6a7;
+    }
+    
+    body.theme-dark #hint-container {
+        background-color: #3e2723;
+        border-color: #5d4037;
+        color: #ffcc80;
+    }
+    
+    body.theme-dark #login-section {
+        background: linear-gradient(to bottom right, #424242, #616161);
+        color: white;
+    }
+    
+    body.theme-dark #zoom-container {
+        background-color: #2c2c2c;
+        color: #e0e0e0;
+    }
+    
+    /* Blue Theme */
+    body.theme-blue {
+        background-color: #e3f2fd;
+        color: #0d47a1;
+    }
+    
+    body.theme-blue #quiz-section {
+        background-color: #bbdefb;
+        box-shadow: 0 2px 5px rgba(13, 71, 161, 0.2);
+    }
+    
+    body.theme-blue .answer {
+        background-color: #90caf9;
+        border-color: #64b5f6;
+        color: #0d47a1;
+    }
+    
+    body.theme-blue .question-parts-container p {
+        color: #1565c0;
+    }
+    
+    body.theme-blue h3 {
+        color: #0277bd;
+    }
+    
+    body.theme-blue #completion-message {
+        background-color: #b3e5fc;
+        border-left-color: #29b6f6;
+        color: #01579b;
+    }
+    
+    body.theme-blue #hint-container {
+        background-color: #e1f5fe;
+        border-color: #81d4fa;
+        color: #0277bd;
+    }
+    
+    body.theme-blue #login-section {
+        background: linear-gradient(to bottom right, #1976d2, #64b5f6);
+        color: white;
+    }
+    
+    body.theme-blue #zoom-container {
+        background-color: #bbdefb;
+    }
+    
+    /* Green Theme */
+    body.theme-green {
+        background-color: #e8f5e9;
+        color: #1b5e20;
+    }
+    
+    body.theme-green #quiz-section {
+        background-color: #c8e6c9;
+        box-shadow: 0 2px 5px rgba(27, 94, 32, 0.2);
+    }
+    
+    body.theme-green .answer {
+        background-color: #a5d6a7;
+        border-color: #81c784;
+        color: #1b5e20;
+    }
+    
+    body.theme-green .question-parts-container p {
+        color: #2e7d32;
+    }
+    
+    body.theme-green h3 {
+        color: #388e3c;
+    }
+    
+    body.theme-green #completion-message {
+        background-color: #c8e6c9;
+        border-left-color: #66bb6a;
+        color: #1b5e20;
+    }
+    
+    body.theme-green #hint-container {
+        background-color: #dcedc8;
+        border-color: #aed581;
+        color: #33691e;
+    }
+    
+    body.theme-green #login-section {
+        background: linear-gradient(to bottom right, #388e3c, #81c784);
+        color: white;
+    }
+    
+    body.theme-green #zoom-container {
+        background-color: #c8e6c9;
+    }
+    
+    /* Purple Theme */
+    body.theme-purple {
+        background-color: #f3e5f5;
+        color: #4a148c;
+    }
+    
+    body.theme-purple #quiz-section {
+        background-color: #e1bee7;
+        box-shadow: 0 2px 5px rgba(74, 20, 140, 0.2);
+    }
+    
+    body.theme-purple .answer {
+        background-color: #ce93d8;
+        border-color: #ba68c8;
+        color: #4a148c;
+    }
+    
+    body.theme-purple .question-parts-container p {
+        color: #6a1b9a;
+    }
+    
+    body.theme-purple h3 {
+        color: #7b1fa2;
+    }
+    
+    body.theme-purple #completion-message {
+        background-color: #e1bee7;
+        border-left-color: #ba68c8;
+        color: #4a148c;
+    }
+    
+    body.theme-purple #hint-container {
+        background-color: #f8bbd0;
+        border-color: #f48fb1;
+        color: #880e4f;
+    }
+    
+    body.theme-purple #login-section {
+        background: linear-gradient(to bottom right, #7b1fa2, #ba68c8);
+        color: white;
+    }
+    
+    body.theme-purple #zoom-container {
+        background-color: #e1bee7;
+    }
+    
+    /* Red Theme */
+    body.theme-red {
+        background-color: #ffebee;
+        color: #b71c1c;
+    }
+    
+    body.theme-red #quiz-section {
+        background-color: #ffcdd2;
+        box-shadow: 0 2px 5px rgba(183, 28, 28, 0.2);
+    }
+    
+    body.theme-red .answer {
+        background-color: #ef9a9a;
+        border-color: #e57373;
+        color: #b71c1c;
+    }
+    
+    body.theme-red .question-parts-container p {
+        color: #c62828;
+    }
+    
+    body.theme-red h3 {
+        color: #d32f2f;
+    }
+    
+    body.theme-red #completion-message {
+        background-color: #ffcdd2;
+        border-left-color: #ef5350;
+        color: #b71c1c;
+    }
+    
+    body.theme-red #hint-container {
+        background-color: #ffebee;
+        border-color: #ef9a9a;
+        color: #b71c1c;
+    }
+    
+    body.theme-red #login-section {
+        background: linear-gradient(to bottom right, #d32f2f, #ef5350);
+        color: white;
+    }
+    
+    body.theme-red #zoom-container {
+        background-color: #ffcdd2;
+    }
+    
+    /* Orange Theme */
+    body.theme-orange {
+        background-color: #fff3e0;
+        color: #e65100;
+    }
+    
+    body.theme-orange #quiz-section {
+        background-color: #ffe0b2;
+        box-shadow: 0 2px 5px rgba(230, 81, 0, 0.2);
+    }
+    
+    body.theme-orange .answer {
+        background-color: #ffcc80;
+        border-color: #ffb74d;
+        color: #e65100;
+    }
+    
+    body.theme-orange .question-parts-container p {
+        color: #ef6c00;
+    }
+    
+    body.theme-orange h3 {
+        color: #f57c00;
+    }
+    
+    body.theme-orange #completion-message {
+        background-color: #ffe0b2;
+        border-left-color: #ffb74d;
+        color: #e65100;
+    }
+    
+    body.theme-orange #hint-container {
+        background-color: #fff3e0;
+        border-color: #ffcc80;
+        color: #e65100;
+    }
+    
+    body.theme-orange #login-section {
+        background: linear-gradient(to bottom right, #f57c00, #ffb74d);
+        color: white;
+    }
+    
+    body.theme-orange #zoom-container {
+        background-color: #ffe0b2;
+    }
+    
+    /* Teal Theme */
+    body.theme-teal {
+        background-color: #e0f2f1;
+        color: #004d40;
+    }
+    
+    body.theme-teal #quiz-section {
+        background-color: #b2dfdb;
+        box-shadow: 0 2px 5px rgba(0, 77, 64, 0.2);
+    }
+    
+    body.theme-teal .answer {
+        background-color: #80cbc4;
+        border-color: #4db6ac;
+        color: #004d40;
+    }
+    
+    body.theme-teal .question-parts-container p {
+        color: #00695c;
+    }
+    
+    body.theme-teal h3 {
+        color: #00796b;
+    }
+    
+    body.theme-teal #completion-message {
+        background-color: #b2dfdb;
+        border-left-color: #4db6ac;
+        color: #004d40;
+    }
+    
+    body.theme-teal #hint-container {
+        background-color: #e0f2f1;
+        border-color: #80cbc4;
+        color: #004d40;
+    }
+    
+    body.theme-teal #login-section {
+        background: linear-gradient(to bottom right, #00796b, #4db6ac);
+        color: white;
+    }
+    
+    body.theme-teal #zoom-container {
+        background-color: #b2dfdb;
+    }
+    
+    /* Indigo Theme */
+    body.theme-indigo {
+        background-color: #e8eaf6;
+        color: #1a237e;
+    }
+    
+    body.theme-indigo #quiz-section {
+        background-color: #c5cae9;
+        box-shadow: 0 2px 5px rgba(26, 35, 126, 0.2);
+    }
+    
+    body.theme-indigo .answer {
+        background-color: #9fa8da;
+        border-color: #7986cb;
+        color: #1a237e;
+    }
+    
+    body.theme-indigo .question-parts-container p {
+        color: #283593;
+    }
+    
+    body.theme-indigo h3 {
+        color: #3949ab;
+    }
+    
+    body.theme-indigo #completion-message {
+        background-color: #c5cae9;
+        border-left-color: #7986cb;
+        color: #1a237e;
+    }
+    
+    body.theme-indigo #hint-container {
+        background-color: #e8eaf6;
+        border-color: #9fa8da;
+        color: #1a237e;
+    }
+    
+    body.theme-indigo #login-section {
+        background: linear-gradient(to bottom right, #3949ab, #7986cb);
+        color: white;
+    }
+    
+    body.theme-indigo #zoom-container {
+        background-color: #c5cae9;
+    }
+    
+    /* Pink Theme */
+    body.theme-pink {
+        background-color: #fce4ec;
+        color: #880e4f;
+    }
+    
+    body.theme-pink #quiz-section {
+        background-color: #f8bbd0;
+        box-shadow: 0 2px 5px rgba(136, 14, 79, 0.2);
+    }
+    
+    body.theme-pink .answer {
+        background-color: #f48fb1;
+        border-color: #f06292;
+        color: #880e4f;
+    }
+    
+    body.theme-pink .question-parts-container p {
+        color: #ad1457;
+    }
+    
+    body.theme-pink h3 {
+        color: #c2185b;
+    }
+    
+    body.theme-pink #completion-message {
+        background-color: #f8bbd0;
+        border-left-color: #f06292;
+        color: #880e4f;
+    }
+    
+    body.theme-pink #hint-container {
+        background-color: #fce4ec;
+        border-color: #f48fb1;
+        color: #880e4f;
+    }
+    
+    body.theme-pink #login-section {
+        background: linear-gradient(to bottom right, #c2185b, #f06292);
+        color: white;
+    }
+    
+    body.theme-pink #zoom-container {
+        background-color: #f8bbd0;
+    }
+    
+    /* Amber Theme */
+    body.theme-amber {
+        background-color: #fff8e1;
+        color: #ff6f00;
+    }
+    
+    body.theme-amber #quiz-section {
+        background-color: #ffecb3;
+        box-shadow: 0 2px 5px rgba(255, 111, 0, 0.2);
+    }
+    
+    body.theme-amber .answer {
+        background-color: #ffe082;
+        border-color: #ffd54f;
+        color: #ff6f00;
+    }
+    
+    body.theme-amber .question-parts-container p {
+        color: #ff8f00;
+    }
+    
+    body.theme-amber h3 {
+        color: #ffa000;
+    }
+    
+    body.theme-amber #completion-message {
+        background-color: #ffecb3;
+        border-left-color: #ffd54f;
+        color: #ff6f00;
+    }
+    
+    body.theme-amber #hint-container {
+        background-color: #fff8e1;
+        border-color: #ffe082;
+        color: #ff6f00;
+    }
+    
+    body.theme-amber #login-section {
+        background: linear-gradient(to bottom right, #ffa000, #ffd54f);
+        color: white;
+    }
+    
+    body.theme-amber #zoom-container {
+        background-color: #ffecb3;
+    }
+    
+    /* Cyan Theme */
+    body.theme-cyan {
+        background-color: #e0f7fa;
+        color: #006064;
+    }
+    
+    body.theme-cyan #quiz-section {
+        background-color: #b2ebf2;
+        box-shadow: 0 2px 5px rgba(0, 96, 100, 0.2);
+    }
+    
+    body.theme-cyan .answer {
+        background-color: #80deea;
+        border-color: #4dd0e1;
+        color: #006064;
+    }
+    
+    body.theme-cyan .question-parts-container p {
+        color: #00838f;
+    }
+    
+    body.theme-cyan h3 {
+        color: #0097a7;
+    }
+    
+    body.theme-cyan #completion-message {
+        background-color: #b2ebf2;
+        border-left-color: #4dd0e1;
+        color: #006064;
+    }
+    
+    body.theme-cyan #hint-container {
+        background-color: #e0f7fa;
+        border-color: #80deea;
+        color: #006064;
+    }
+    
+    body.theme-cyan #login-section {
+        background: linear-gradient(to bottom right, #0097a7, #4dd0e1);
+        color: white;
+    }
+    
+    body.theme-cyan #zoom-container {
+        background-color: #b2ebf2;
+    }
+    
+    /* Lime Theme */
+    body.theme-lime {
+        background-color: #f9fbe7;
+        color: #827717;
+    }
+    
+    body.theme-lime #quiz-section {
+        background-color: #dcedc8;
+        box-shadow: 0 2px 5px rgba(130, 119, 23, 0.2);
+    }
+    
+    body.theme-lime .answer {
+        background-color: #d4e157;
+        border-color: #cddc39;
+        color: #827717;
+    }
+    
+    body.theme-lime .question-parts-container p {
+        color: #9e9d24;
+    }
+    
+    body.theme-lime h3 {
+        color: #afb42b;
+    }
+    
+    body.theme-lime #completion-message {
+        background-color: #dcedc8;
+        border-left-color: #cddc39;
+        color: #827717;
+    }
+    
+    body.theme-lime #hint-container {
+        background-color: #f9fbe7;
+        border-color: #d4e157;
+        color: #827717;
+    }
+    
+    body.theme-lime #login-section {
+        background: linear-gradient(to bottom right, #afb42b, #cddc39);
+        color: white;
+    }
+    
+    body.theme-lime #zoom-container {
+        background-color: #dcedc8;
+    }
+    
+    /* Hint Container */
+    #hint-container {
+        border-radius: 5px;
+        padding: 10px;
+        margin: 10px 0;
+        display: none;
+    }
+    
+    /* Theme Toggle */
+    #theme-toggle {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background-color: #333;
+        color: white;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    
+    /* Accessibility Improvements */
+    .answer:focus, button:focus, input:focus {
+        outline: 3px solid #4d90fe;
+        outline-offset: 2px;
+    }
+    
+    /* Improved Mobile Experience */
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 24px;
+        }
+        h2 {
+            font-size: 20px;
+        }
+        .question-parts-container p {
+            font-size: 18px;
+        }
+        h3 {
+            font-size: 18px;
+             flex-direction: column; /* Stack items vertically */
+            align-items: flex-start; /* Align items to the start */
+        }
+         h3 #score-display-inside-h3,
+         h3 #showResultBtn-inside-h3 {
+             margin-left: 0; /* Reset margin */
+             margin-right: 0; /* Reset margin */
+             width: 100%; /* Take full width */
+             box-sizing: border-box; /* Include padding in width */
+             margin-top: 5px; /* Add space between stacked items */
+         }
+        .answer {
+            padding: 15px; /* Increased padding for better touch targets */
+            font-size: 16px;
+            min-height: 48px; /* Minimum touch target size */
+        }
+        button, input[type="text"], input[type="number"] {
+            font-size: 16px;
+            padding: 12px 16px; /* Increased padding for better touch targets */
+            min-height: 48px; /* Minimum touch target size */
+        }
+        .control-row {
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .control-row > * {
+            width: 100%;
+            margin-bottom: 8px;
+        }
+        .control-row > *:last-child {
+            margin-bottom: 0;
+        }
+        /* Removed original #score-display, #showResultBtn, #goto-control-group media query styles */
+        #goto-control-group {
+            flex-direction: row; /* Keep Go and Q# inline */
+            width: 100%;
+            gap: 8px;
+        }
+        #goto-control-group input[type="number"] {
+             flex-grow: 1;
+             width: auto;
+             order: 2;
+         }
+         #goto-control-group button {
+             flex-grow: 0;
+             width: auto;
+             padding: 12px 16px;
+             order: 1;
+         }
+        #login-section {
+            margin: 40px auto;
+            padding: 20px;
+        }
+        #login-section .center {
+            flex-direction: column;
+            gap: 10px;
+        }
+        #login-section input {
+            width: 100%;
+            margin-right: 0 !important;
+        }
+        #login-section button {
+            width: 100%;
+        }
+        #zoom-container {
+            flex-direction: column;
+            gap: 5px;
+        }
+        #zoom-slider {
+            width: 100%;
+        }
+    }
+    
+#question-display-area {
+  text-align: justify;
+}
+
+#border-wrapper {
+    border: 10px double;
+    animation: pastelBlink 2s infinite alternate;
+    padding: 20px;
+    border-radius: 25px;
+    box-sizing: border-box;
+    min-height: 30vh;
+}
+
+@keyframes pastelBlink {
+  0%   { border-color: #ff99aa; }
+  25%  { border-color: #99ffe5; }
+  50%  { border-color: #ffff99; }
+  75%  { border-color: #c299ff; }
+  100% { border-color: #ff99aa; }
+}
+
+#passage {
+  border: 10px double;
+  border-radius: 15px;
+  animation: pastelBlinkPassage 2s infinite alternate;
+  padding: 20px;
+  margin-top: 20px;
+  box-shadow: 0 0 12px rgba(255, 105, 180, 0.4);
+}
+
+@keyframes pastelBlinkPassage {
+  0%   { border-color: #ff99aa; }
+  25%  { border-color: #99ffe5; }
+  50%  { border-color: #ffff99; }
+  75%  { border-color: #c299ff; }
+  100% { border-color: #ff99aa; }
+}
+
+/* Vertical Zoom Slider Styles */
+#zoom-container {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    display: none;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+#zoom-slider {
+    writing-mode: bt-lr; /* IE */
+    -webkit-appearance: slider-vertical; /* WebKit */
+    width: 30px;
+    height: 150px;
+    background: transparent;
+    outline: none;
+    margin: 10px 0;
+}
+
+/* Firefox */
+#zoom-slider::-moz-range-orient {
+    vertical;
+}
+
+#zoom-value {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#zoom-reset {
+    margin-top: 10px;
+    width: auto;
+    padding: 5px 15px;
+}
+
+/* Theme adjustments for zoom container */
+body.theme-light #zoom-container {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+body.theme-dark #zoom-container {
+    background-color: #2c2c2c;
+    color: #e0e0e0;
+}
+
+body.theme-blue #zoom-container {
+    background-color: #bbdefb;
+    color: #0d47a1;
+}
+
+body.theme-green #zoom-container {
+    background-color: #c8e6c9;
+    color: #1b5e20;
+}
+
+body.theme-purple #zoom-container {
+    background-color: #e1bee7;
+    color: #4a148c;
+}
+
+body.theme-red #zoom-container {
+    background-color: #ffcdd2;
+    color: #b71c1c;
+}
+
+body.theme-orange #zoom-container {
+    background-color: #ffe0b2;
+    color: #e65100;
+}
+
+body.theme-teal #zoom-container {
+    background-color: #b2dfdb;
+    color: #004d40;
+}
+
+body.theme-indigo #zoom-container {
+    background-color: #c5cae9;
+    color: #1a237e;
+}
+
+body.theme-pink #zoom-container {
+    background-color: #f8bbd0;
+    color: #880e4f;
+}
+
+body.theme-amber #zoom-container {
+    background-color: #ffecb3;
+    color: #ff6f00;
+}
+
+body.theme-cyan #zoom-container {
+    background-color: #b2ebf2;
+    color: #006064;
+}
+
+body.theme-lime #zoom-container {
+    background-color: #dcedc8;
+    color: #827717;
+}
+
+/* Theme-specific zoom container styles */
+.theme-light-zoom {
+    background-color: #f8f9fa !important;
+    color: #333 !important;
+}
+
+.theme-dark-zoom {
+    background-color: #2c2c2c !important;
+    color: #e0e0e0 !important;
+}
+
+.theme-blue-zoom {
+    background-color: #bbdefb !important;
+    color: #0d47a1 !important;
+}
+
+.theme-green-zoom {
+    background-color: #c8e6c9 !important;
+    color: #1b5e20 !important;
+}
+
+.theme-purple-zoom {
+    background-color: #e1bee7 !important;
+    color: #4a148c !important;
+}
+
+.theme-red-zoom {
+    background-color: #ffcdd2 !important;
+    color: #b71c1c !important;
+}
+
+.theme-orange-zoom {
+    background-color: #ffe0b2 !important;
+    color: #e65100 !important;
+}
+
+.theme-teal-zoom {
+    background-color: #b2dfdb !important;
+    color: #004d40 !important;
+}
+
+.theme-indigo-zoom {
+    background-color: #c5cae9 !important;
+    color: #1a237e !important;
+}
+
+.theme-pink-zoom {
+    background-color: #f8bbd0 !important;
+    color: #880e4f !important;
+}
+
+.theme-amber-zoom {
+    background-color: #ffecb3 !important;
+    color: #ff6f00 !important;
+}
+
+.theme-cyan-zoom {
+    background-color: #b2ebf2 !important;
+    color: #006064 !important;
+}
+
+.theme-lime-zoom {
+    background-color: #dcedc8 !important;
+    color: #827717 !important;
+}
+
+/* Theme-specific zoom button styles */
+.theme-light-zoom #zoom-reset {
+    background-color: #ff9800 !important;
+    color: white !important;
+}
+
+.theme-dark-zoom #zoom-reset {
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+/* Add similar button styles for all other themes */
+.theme-blue-zoom #zoom-reset,
+.theme-green-zoom #zoom-reset,
+.theme-purple-zoom #zoom-reset,
+.theme-red-zoom #zoom-reset,
+.theme-orange-zoom #zoom-reset,
+.theme-teal-zoom #zoom-reset,
+.theme-indigo-zoom #zoom-reset,
+.theme-pink-zoom #zoom-reset,
+.theme-amber-zoom #zoom-reset,
+.theme-cyan-zoom #zoom-reset,
+.theme-lime-zoom #zoom-reset {
+    background-color: #6c757d !important;
+    color: white !important;
+}
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.blinking {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+
+/* Ensure correct answer highlighting is not overridden */
+.answer.correct {
+    background-color: lightgreen !important;
+    border-color: green !important;
+}
+
+/* Theme-specific correct answer styles */
+body.theme-dark .answer.correct {
+    background-color: #2e7d32 !important;
+    border-color: #4caf50 !important;
+    color: white !important;
+}
+
+body.theme-blue .answer.correct {
+    background-color: #0d47a1 !important;
+    border-color: #1976d2 !important;
+    color: white !important;
+}
+
+body.theme-green .answer.correct {
+    background-color: #1b5e20 !important;
+    border-color: #388e3c !important;
+    color: white !important;
+}
+
+/* Add similar styles for all other themes */
+body.theme-purple .answer.correct,
+body.theme-red .answer.correct,
+body.theme-orange .answer.correct,
+body.theme-teal .answer.correct,
+body.theme-indigo .answer.correct,
+body.theme-pink .answer.correct,
+body.theme-amber .answer.correct,
+body.theme-cyan .answer.correct,
+body.theme-lime .answer.correct {
+    background-color: #2e7d32 !important;
+    border-color: #4caf50 !important;
+    color: white !important;
+}
+
+
+/* Print-specific styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  
+  #print-section, #print-section * {
+    visibility: visible;
+  }
+  
+  #print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* Print section styling */
+#print-section {
+  display: none;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+#print-section h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#print-section .question {
+  margin-bottom: 25px;
+  page-break-inside: avoid;
+}
+
+#print-section .question-text {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#print-section .options {
+  margin-left: 20px;
+}
+
+#print-section .option {
+  margin-bottom: 5px;
+}
+
+#print-section .answer {
+  color: green;
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+</style>
+</head>
+<body class="theme-light">
+<div id="theme-toggle" onclick="toggleTheme()" aria-label="Change theme">🎨</div>
+<div id="theme-toggle" class="no-print" onclick="toggleTheme()" aria-label="Change theme">🎨</div>
+
+<div id="border-wrapper">
+<div id="login-section">
+
+<h2>WELCOME TO</h2>
+<h2>CSEET e-Bulletin 22_MCQs</h2>
+<h2>July 2025</h2>
+<div class="center" style="display: flex; justify-content: center; align-items: center;">
+<input id="access-code" placeholder="Enter Access Code" style="margin-right: 10px;" type="password" aria-label="Access code input" onkeypress="handleEnterKey(event)"/>
+<button onclick="verifyCode()">Enter</button>
+</div>
+</div>
+<div class="hidden" id="quiz-section">
+<div style="border: 2px solid #ccc; border-radius: 10px; padding: 10px; margin: 10px 0;">
+<div style="background-color: Olive; color: white; font-weight: bold; text-align: justify; padding: 12px 15px; border-radius: 8px; font-size: 0.9em;">
+
+<div>Please Note:</div>
+<div>** Many Button features given only for convenience; so USE only if required **</div>
+
+<div> </div>
+</div>
+
+</div>
+<h1 class="title">CSEET e-Bulletin July 2025 22_MCQs</h1>
+<h2>
+<span style="color: #008000;"> </span>
+</h2>
+
+<!-- Completion Message -->
+<div id="completion-message" role="status" aria-live="polite"></div>
+
+<!-- Vertical Zoom Controller -->
+<div id="zoom-container" role="slider" aria-label="Zoom control" style="display: none; position: fixed; right: 20px; top: 50%; transform: translateY(-50%); flex-direction: column; align-items: center; z-index: 1000; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.2);">
+    <span>Zoom:</span>
+    <input type="range" id="zoom-slider" min="50" max="150" value="100" step="1" oninput="updateZoom(this.value)" style="writing-mode: bt-lr; -webkit-appearance: slider-vertical; width: 30px; height: 150px; background: transparent; outline: none; margin: 10px 0;">
+    <span id="zoom-value">100%</span>
+    <button id="zoom-reset" onclick="resetZoom()" style="margin-top: 10px; width: auto; padding: 5px 15px;">Reset</button>
+
+</div>
+<div id="question-display-area">
+<!-- Question number, score, and test result will be placed here by JavaScript -->
+</div>
+<div id="answer-options" style="font-size: 18px; font-family: Arial;" role="radiogroup" aria-label="Answer options">Your answer options here</div>
+<div id="correct-answer-message" style="display: none; color: green; font-weight: bold;"></div>
+<div id="result-message"></div>
+
+<!-- Hint Container -->
+<div id="hint-container" role="status" aria-live="polite">
+    <strong>Hint:</strong> <span id="hint-text"></span>
+</div>
+
+<div id="controls">
+<div id="controls" class="no-print">
+    <!-- Progress container moved here -->
+    <div id="progress-container" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Quiz progress">
+        <div id="progress-bar"></div>
+    </div>
+<div class="control-row" style="display: flex; flex-wrap: wrap; gap: 6px;">
+<button id="prevBtn" onclick="prevQuestion()" style="width: 95px;" aria-label="Previous question"><u>P</u>revious</button>
+<button id="nextBtn" onclick="nextQuestion()" style="width: 95px;" aria-label="Next question"><u>N</u>ext</button>
+<div id="goto-control-group" style="display: flex; align-items: center; gap: 4px;">
+<button id="goBtn" onclick="gotoQuestion()" style="width: 60px;" aria-label="Go to question"><u>G</u>o</button>
+<input id="goto-number" max="120" min="1" placeholder="Q#" style="width: 60px;" type="number" aria-label="Question number"/>
+</div>
+<button id="restartBtn" onclick="restartQuiz()" style="width: 95px;" aria-label="Restart quiz"><u>R</u>estart</button>
+<button id="showAnswersBtn" onclick="toggleShowAnswers()" style="width: 125px;" aria-label="Show answers"><u>S</u>how Answers</button>
+<button id="helpBtn" onclick="toggleHelp()" style="width: 80px;" aria-label="Show help"><u>H</u>elp</button>
+
+<button id="zoomToggleBtn" onclick="toggleZoomController()" style="width: 80px;" aria-label="Toggle zoom control"><u>Z</u>oom</button>
+<button id="printBtn" onclick="printMCQs()" style="width: 80px;" aria-label="Print MCQs"><u>P</u>rint</button>
+
+<button onclick="saveAsTXT()">Save as TXT</button>
+
+</div>
+<div id="helpBox" style="display: none; margin-top: 10px; padding: 10px; border: 1px solid #ccc; background-color: #f9f9f9; font-size: 14px;">
+<strong>🟢 Button Guide:</strong><br/><br/>
+    1. <strong>Help (ON/OFF)</strong>: Shows or hides this help guide.<br/>
+    2. <strong>Score Display</strong>: Updates in real-time when a correct answer is selected.<br/>
+    3. <strong>Test Results</strong>: Displays your score with a congratulatory message.<br/>
+    4. <strong>Previous</strong>: Moves to the previous question.<br/>
+    5. <strong>Next</strong>: Moves to the next question.<br/>
+    6. <strong>Go</strong>: Jumps to the question number entered in the input field.<br/>
+    7. <strong>Restart</strong>: Restarts the quiz from the beginning.<br/>
+    8. <strong>Show Answers (ON/OFF)</strong>: Shows the correct answer in sequential / orderly mode and automatically moves to the next question every 3 seconds.<br/>
+    9. <strong>Listen Answers</strong>: Shows the correct answer  in sequential / orderly mode and reads it aloud and automatically moves to the next question.<br/>
+    10. <strong>Audio Pause/Resume</strong>: Pauses or resumes the Listen Answers playback.<br/>
+    11. <strong>Break</strong>: Stops the Listen Answers playback.<br/>
+    12. <strong>Theme Selector</strong>: Click to cycle through different color themes (12 themes available).<br/>
+    13. <strong>Zoom Control</strong>: Adjust the zoom level of the quiz content from 50% to 150%.<br/><br/>
+<strong>📝 Notes:</strong><br/>
+    - All buttons have keyboard shortcuts for quick access.<br/>
+    - While taking the test, you can use either the mouse or number keys <strong>1–4</strong> to select options A–D.<br/>
+    - Your progress is automatically saved as you answer questions.<br/>
+    - When you complete the last question with the timer started, the timer will automatically stop and your completion time will be displayed.<br/>
+    - Press Enter in the password field to login directly.<br/>
+    - Use the zoom slider to adjust the size of the quiz content for better visibility.<br/>
+</div>
+<!-- Score display and Test Result button are moved by JS -->
+</div>
+<div class="control-row">
+<!-- Changed button text and hotkey to 'L' -->
+<button id="readAllAnswersBtn" onclick="readAllAnswers()" aria-label="Listen to answers"><u>L</u>isten Answers</button>
+<button disabled="" id="pauseAudioBtn" onclick="toggleAudioPause()" aria-label="Pause or resume audio"><u>A</u>udio Pause/Resume</button>
+<button disabled="" id="breakBtn" onclick="breakReadAllAnswers()" aria-label="Stop audio playback"><u>B</u>reak</button>
+<!-- Test Result button is moved by JS -->
+</div>
+</div>
+</div>
+<!-- Passage after Question 110 -->
+<div id="quiz-timer-wrapper" style="display: flex; justify-content: flex-end; margin: 20px 0;">
+<div id="quiz-timer-wrapper" class="no-print">
+<div id="timer-container" style="display: flex; gap: 10px; align-items: center;">
+<button id="startButton" style="background-color: green; color: white; padding: 6px 12px;">START</button>
+<span style="font-weight: bold;">TIMER (HH:MM:SS):</span>
+<div id="timer" style="font-size: 1.2em; padding: 6px 12px; border-radius: 6px; background-color: #f0f0f0;">00:10:00</div> 
+<button id="endButton" style="background-color: red; color: white; padding: 6px 12px;">END</button>
+<button id="resetButton" style="background-color: blue; color: white; padding: 6px 12px;">RESET</button>
+<div style="font-size: 0.85em; color: #666; margin-top: 5px;">
+<em>Note: Please enable the timer only after login.</em>
+</div>
+</div>
+</div>
+<!-- TIMER END -->
+<script>
+// ====================== CONSTANTS ======================
+const ANSWER_DELAY_MS = 1000;
+const AUTO_ADVANCE_DELAY_MS = 3000; // For SHOW ANSWERS
+const LISTEN_ANSWERS_DELAY_MS = 0;  // For LISTEN ANSWERS - ZERO delay
+
+const MIN_TOUCH_TARGET_SIZE_PX = 48;
+const ACCESS_CODE = "22"; // In production, this should be verified server-side
+const STORAGE_KEY = 'quizProgress';
+const THEME_KEY = 'quizTheme';
+const ZOOM_KEY = 'quizZoom';
+
+// ====================== LOGGER ======================
+const Logger = {
+  levels: {
+    ERROR: 0,
+    WARN: 1,
+    INFO: 2,
+    DEBUG: 3
+  },
+  
+  currentLevel: 2, // INFO
+  
+  log: function(level, message, data) {
+    if (level > this.currentLevel) return;
+    
+    const timestamp = new Date().toISOString();
+    console.log(`[${timestamp}] [${level}] ${message}`, data || '');
+  },
+  
+  error: function(message, data) {
+    this.log(this.levels.ERROR, message, data);
+  },
+  
+  warn: function(message, data) {
+    this.log(this.levels.WARN, message, data);
+  },
+  
+  info: function(message, data) {
+    this.log(this.levels.INFO, message, data);
+  },
+  
+  debug: function(message, data) {
+    this.log(this.levels.DEBUG, message, data);
+  }
+};
+
+// ====================== QUIZ MODULE ======================
+const QuizModule = {
+  currentQuestionIndex: 0,
+  userAnswersShuffled: [],
+  showAnswersMode: false,
+  isAudioPaused: false,
+  isSpeaking: false,
+  isBreaking: false,
+  isShowingAnswers: false,
+  isTestCompleted: false,
+  isHintVisible: false,
+  
+  allQuestions: [
+    {
+      question: "Which of the following is not an element of the communication process?",
+      options: ["A. Sender", "B. Channel", "C. Decoder", "D. Motivation"],
+      answer: "D. Motivation"
+    },
+    {
+      question: "The main purpose of a circular in business communication is:",
+      options: ["A. To negotiate terms", "B. To inform a group about a common matter", "C. To resolve conflicts", "D. To seek clarification"],
+      answer: "B. To inform a group about a common matter"
+    },
+    {
+      question: "Which of the following types of communication takes place without using spoken or written words?",
+      options: ["A. Oral communication", "B. Non-verbal communication", "C. Visual communication", "D. Lateral communication"],
+      answer: "B. Non-verbal communication"
+    },
+    {
+      question: "Identify the correct sentence:",
+      options: [
+        "A. Driving down the road, the trees were beautiful.",
+        "B. The trees were beautiful, driving down the road.",
+        "C. Driving down the road, we saw beautiful trees.",
+        "D. We saw, driving down the road, beautiful trees."
+      ],
+      answer: "C. Driving down the road, we saw beautiful trees."
+    },
+    {
+      question: "Choose the correct indirect form:\nHe said, \"I will complete the task tomorrow.\"",
+      options: [
+        "A. He said that he will complete the task the next day.",
+        "B. He said that he would complete the task the next day.",
+        "C. He said he completes the task tomorrow.",
+        "D. He said he would have completed the task tomorrow."
+      ],
+      answer: "B. He said that he would complete the task the next day."
+    },
+    {
+      question: "The ............... declares India to be a Sovereign, Socialist, Secular, Democratic Republic and secures to all its citizens Justice, Liberty, Equality and Fraternity.",
+      options: ["A. Fundamental Rights", "B. Preamble", "C. Directive Principles", "D. None of the above"],
+      answer: "B. Preamble"
+    },
+    {
+      question: "Before enactment of the Companies Act, 2013, choose which Companies Act was prevailing in India:",
+      options: ["A. Companies Act, 1882", "B. Companies Act, 1913", "C. Companies Act, 1956", "D. Companies Act, 2002"],
+      answer: "C. Companies Act, 1956"
+    },
+    {
+      question: "Choose the correct legal terminology for \"A friend of court member of the bar who is appointed to assist the Court\":",
+      options: ["A. Ad idem", "B. Amicus Curiae", "C. Bona fide", "D. Actus Curiae Neminem Gravabit"],
+      answer: "B. Amicus Curiae"
+    },
+    {
+      question: "Look at this series: 2, 4, 6, 8, 10, . . . What number should come next?",
+      options: ["A. 11", "B. 13", "C. 14", "D. 12"],
+      answer: "D. 12"
+    },
+    {
+      question: "JAK KBL LCM MDN ...............",
+      options: ["A. OEP", "B. MEN", "C. NEO", "D. PFQ"],
+      answer: "C. NEO"
+    },
+    {
+      question: "In which of the following case / cases, the law of demand is not applicable?",
+      options: ["A. Giffen Goods", "B. Articles of Snob Appeal", "C. Speculation", "D. All of the above"],
+      answer: "D. All of the above"
+    },
+    {
+      question: "Which of the following is not the method of measuring national income?",
+      options: ["A. Product Method", "B. Income Method", "C. Profit Method", "D. Expenditure Method"],
+      answer: "C. Profit Method"
+    },
+    {
+      question: "Which of the following is not covered under the three major components of Indian Union Budget?",
+      options: ["A. Fund Flow Statement", "B. Revenue Budget", "C. Capital Budget", "D. Fiscal Policy Statement"],
+      answer: "A. Fund Flow Statement"
+    },
+    {
+      question: "Which of the following is a type of entrepreneurs?",
+      options: ["A. Drone Entrepreneurs", "B. Trading Entrepreneur", "C. Women Entrepreneurs", "D. All of the above"],
+      answer: "D. All of the above"
+    },
+    {
+      question: "Which of the following is not the main component of Technological Environment?",
+      options: [
+        "A. Rate of Technological change and Diffusion",
+        "B. Competitive Regulations",
+        "C. Impact of Technology on cost, quality and value chain",
+        "D. Use of New processes and equipment"
+      ],
+      answer: "B. Competitive Regulations"
+    },
+    {
+      question: "The 17th BRICS Summit was held on July 6–7, 2025. In which among the following countries was it held?",
+      options: ["A. Russia", "B. India", "C. Brazil", "D. China"],
+      answer: "C. Brazil"
+    },
+    {
+      question: "Recently, Elon Musk announced the formation of a new political party in the United States of America. What is the name given to the new party?",
+      options: ["A. Freedom Party", "B. America Party", "C. New America Party", "D. United Party"],
+      answer: "B. America Party"
+    },
+    {
+      question: "Union Home Minister Amit Shah laid the foundation stone of India's first cooperative university, 'Tribhuvan' Cooperative University. In which state is it being established?",
+      options: ["A. Maharashtra", "B. Gujarat", "C. Madhya Pradesh", "D. Uttar Pradesh"],
+      answer: "B. Gujarat"
+    },
+    {
+      question: "Mr. Ravi Sinha retired from the Research and Analysis Wing (RAW). Who succeeded him as the new chief of RAW effective July 01, 2025?",
+      options: ["A. Sameer Verma", "B. Parag Jain", "C. Rakesh Asthana", "D. Ravi Sinha"],
+      answer: "B. Parag Jain"
+    },
+    {
+      question: "Which among the following is the first state in India to implement a mobile-based e-voting system for urban local body elections?",
+      options: ["A. Maharashtra", "B. Gujarat", "C. Bihar", "D. Uttar Pradesh"],
+      answer: "C. Bihar"
+    },
+    {
+      question: "A fruit seller had some apples. He sells 40% apples and still has 420 apples. Originally, he had:",
+      options: ["A. 588 apples", "B. 600 apples", "C. 672 apples", "D. 700 apples"],
+      answer: "D. 700 apples"
+    },
+    {
+      question: "In an election between two candidates, one got 55% of the total valid votes, 20% of the votes were invalid. If the total number of votes was 7500, the number of valid votes that the other candidate got was:",
+      options: ["A. 2700", "B. 2900", "C. 3000", "D. 3100"],
+      answer: "A. 2700"
+    }
+  ],
+  
+  questions: [], // This array will hold the currently displayed questions (shuffled or original)
+  
+  hints: {
+
+  },
+  
+  init: function() {
+    Logger.info("Initializing quiz module");
+    
+    this.currentQuestionIndex = 0;
+    this.questions = [...this.allQuestions];
+    this.shuffleArray(this.questions);
+    this.userAnswersShuffled = Array(this.questions.length).fill(null);
+    this.showAnswersMode = false;
+    this.isAudioPaused = false;
+    this.isSpeaking = false;
+    this.isBreaking = false;
+    this.isShowingAnswers = false;
+    this.isTestCompleted = false;
+    this.isHintVisible = false;
+    
+    document.getElementById("goto-number").value = "";
+    document.getElementById("result-message").textContent = "";
+    document.getElementById("correct-answer-message").style.display = "none";
+    document.getElementById("correct-answer-message").textContent = "";
+    document.getElementById("completion-message").style.display = "none";
+    document.getElementById("hint-container").style.display = "none";
+    
+    document.getElementById("pauseAudioBtn").disabled = true;
+    document.getElementById("pauseAudioBtn").innerHTML = "<u>A</u>udio Pause/Resume";
+    document.getElementById("breakBtn").disabled = true;
+    document.getElementById("breakBtn").innerHTML = "<u>B</u>reak";
+    
+    this.updateScore();
+    UIModule.showQuestion();
+    this.loadProgress();
+    this.updateProgressBar();
+  },
+  
+  shuffleArray: function(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+  },
+  
+  updateScore: function() {
+    Logger.debug("Updating score");
+    
+    let correct = 0;
+    for (let i = 0; i < this.questions.length; i++) {
+      const q = this.questions[i];
+      const userAnswer = this.userAnswersShuffled[i];
+      const originalQ = this.allQuestions.find(oq => oq.question === q.question);
+      
+      if (originalQ && userAnswer !== null && userAnswer !== undefined && userAnswer === originalQ.answer) {
+        correct++;
+      }
+    }
+    
+    const scoreDisplayElement = document.getElementById("score-display-inside-h3");
+    if (scoreDisplayElement) {
+      scoreDisplayElement.textContent = `Score: ${correct} / ${this.allQuestions.length}`;
+    }
+    
+    // Save progress after updating score
+    this.saveProgress();
+  },
+  
+  saveProgress: function() {
+    Logger.debug("Saving progress to localStorage");
+    
+    const progress = {
+      currentQuestionIndex: this.currentQuestionIndex,
+      userAnswers: this.userAnswersShuffled,
+      timestamp: new Date().toISOString()
+    };
+    
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(progress));
+    } catch (error) {
+      Logger.error("Error saving progress to localStorage", error);
+    }
+  },
+  
+  loadProgress: function() {
+    Logger.debug("Loading progress from localStorage");
+    
+    try {
+      const savedProgress = localStorage.getItem(STORAGE_KEY);
+      if (savedProgress) {
+        const progress = JSON.parse(savedProgress);
+        
+        // Only restore progress if it's from the same quiz session
+        if (progress.userAnswers && progress.userAnswers.length === this.questions.length) {
+          this.currentQuestionIndex = progress.currentQuestionIndex || 0;
+          this.userAnswersShuffled = progress.userAnswers;
+          this.updateScore();
+          UIModule.showQuestion();
+          Logger.info("Progress loaded successfully");
+        }
+      }
+    } catch (error) {
+      Logger.error("Error loading progress from localStorage", error);
+    }
+  },
+  
+  updateProgressBar: function() {
+    Logger.debug("Updating progress bar");
+    
+    const progress = ((this.currentQuestionIndex + 1) / this.questions.length) * 100;
+    const progressBar = document.getElementById('progress-bar');
+    const progressContainer = document.getElementById('progress-container');
+    
+    if (progressBar) {
+      progressBar.style.width = `${progress}%`;
+    }
+    
+    if (progressContainer) {
+      progressContainer.setAttribute('aria-valuenow', Math.round(progress));
+    }
+  },
+  
+  clearProgress: function() {
+    Logger.debug("Clearing saved progress");
+    
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (error) {
+      Logger.error("Error clearing progress from localStorage", error);
+    }
+  },
+  
+  completeTest: function() {
+    if (this.isTestCompleted) return;
+    
+    Logger.info("Test completed");
+    
+    this.isTestCompleted = true;
+    
+    // Only show completion message if timer was started
+    if (TimerModule.testStartTime) {
+      // Stop the timer if it's running
+      if (TimerModule.timerInterval) {
+        clearInterval(TimerModule.timerInterval);
+        TimerModule.timerInterval = null;
+      }
+      
+      // Calculate the duration
+      const endTime = new Date();
+      const durationInSeconds = Math.floor((endTime - TimerModule.testStartTime) / 1000);
+      const durationText = TimerModule.formatTime(durationInSeconds);
+      
+      // Show the completion message
+      
+      // Also, show the result message
+      showResult();
+    }
+    
+    // Save completion status
+    this.saveProgress();
+  }
+};
+
+// ====================== UI MODULE ======================
+const UIModule = {
+  themes: [
+    { name: 'theme-light', icon: '☀️' },
+    { name: 'theme-dark', icon: '🌙' },
+    { name: 'theme-blue', icon: '💧' },
+    { name: 'theme-green', icon: '🌿' },
+    { name: 'theme-purple', icon: '🔮' },
+    { name: 'theme-red', icon: '❤️' },
+    { name: 'theme-orange', icon: '🧡' },
+    { name: 'theme-teal', icon: '🩵' },
+    { name: 'theme-indigo', icon: '🔵' },
+    { name: 'theme-pink', icon: '🩷' },
+    { name: 'theme-amber', icon: '💛' },
+    { name: 'theme-cyan', icon: '🔷' },
+    { name: 'theme-lime', icon: '💚' }
+  ],
+  currentThemeIndex: 0,
+  
+  showQuestion: function() {
+    Logger.debug("Displaying question");
+    
+    // Reset hint visibility for each question
+    QuizModule.isHintVisible = false;
+    document.getElementById("hint-container").style.display = "none";
+    
+    const currentQuestions = QuizModule.isShowingAnswers ? QuizModule.allQuestions : QuizModule.questions;
+    
+    if (currentQuestions.length === 0) {
+      document.getElementById("question-display-area").innerHTML = "<p>No questions available</p>";
+      document.getElementById("answer-options").innerHTML = "";
+      document.getElementById("correct-answer-message").style.display = "none";
+      
+      const scoreDisplayElement = document.getElementById("score-display-inside-h3");
+      if (scoreDisplayElement) {
+        scoreDisplayElement.textContent = `Score: 0 / ${QuizModule.allQuestions.length}`;
+      }
+      return;
+    }
+    
+    const q = currentQuestions[QuizModule.currentQuestionIndex];
+    const originalQ = QuizModule.allQuestions.find(oq => oq.question === q.question);
+    const correctAnswer = originalQ ? originalQ.answer : null;
+    
+    let userAnswerForThisQ = null;
+    if (!QuizModule.isShowingAnswers) {
+      const shuffledIndex = QuizModule.questions.findIndex(sq => sq.question === q.question);
+      if (shuffledIndex !== -1) {
+        userAnswerForThisQ = QuizModule.userAnswersShuffled[shuffledIndex];
+      }
+    }
+    
+    const questionDisplayArea = document.getElementById("question-display-area");
+    questionDisplayArea.innerHTML = "";
+    
+    // Create the h3 element for the question number
+    const questionNumberH3 = document.createElement('h3');
+    const displayQuestionNumber = QuizModule.isShowingAnswers ? 
+      QuizModule.allQuestions.indexOf(originalQ) + 1 : QuizModule.currentQuestionIndex + 1;
+    questionNumberH3.textContent = `Q${displayQuestionNumber}:`;
+    
+    // Create the score display div to go inside the h3
+    const scoreDisplayDiv = document.createElement('div');
+    scoreDisplayDiv.id = 'score-display-inside-h3';
+    
+    // Create the Test Result button to go inside the h3
+    const showResultBtn = document.createElement('button');
+    showResultBtn.id = 'showResultBtn-inside-h3';
+    showResultBtn.innerHTML = '<u>T</u>est Result';
+    showResultBtn.onclick = showResult;
+    
+    // Append the score display and test result button to the h3
+    questionNumberH3.appendChild(scoreDisplayDiv);
+    questionNumberH3.appendChild(showResultBtn);
+    
+    // Append the h3 to the question display area
+    questionDisplayArea.appendChild(questionNumberH3);
+    
+    const questionPartsContainer = document.createElement('div');
+    questionPartsContainer.classList.add('question-parts-container');
+    questionDisplayArea.appendChild(questionPartsContainer);
+    
+    if (q.question) {
+      const singleQuestionElement = document.createElement('p');
+      singleQuestionElement.innerHTML = q.question;
+      questionPartsContainer.appendChild(singleQuestionElement);
+    }
+    
+    const questionImageDiv = document.createElement('div');
+    questionImageDiv.id = 'question-image';
+    questionImageDiv.style.display = "none";
+    questionDisplayArea.appendChild(questionImageDiv);
+    
+    if (q.image) {
+      const img = document.createElement("img");
+      img.src = q.image;
+      img.alt = `Image for question ${displayQuestionNumber}`;
+      questionImageDiv.appendChild(img);
+      questionImageDiv.style.display = "block";
+    }
+    
+    const optionsContainer = document.getElementById("answer-options");
+    optionsContainer.innerHTML = "";
+    document.getElementById("correct-answer-message").textContent = "";
+    document.getElementById("correct-answer-message").style.display = "none";
+    
+    const currentOptions = q.options;
+    
+    currentOptions.forEach((opt, index) => {
+      const div = document.createElement("div");
+      div.innerHTML = opt;
+      div.className = "answer";
+      div.setAttribute("role", "radio");
+      div.setAttribute("aria-checked", "false");
+      div.setAttribute("tabindex", "0");
+      div.setAttribute("data-option", opt);
+      
+      if (QuizModule.isShowingAnswers) {
+        if (opt === correctAnswer) {
+          div.classList.add("correct");
+          div.setAttribute("aria-checked", "true");
+        }
+      } else {
+        if (opt === userAnswerForThisQ) {
+          if (opt === correctAnswer) {
+            div.classList.add("correct");
+            div.setAttribute("aria-checked", "true");
+          } else {
+            div.classList.add("incorrect");
+            div.setAttribute("aria-checked", "false");
+          }
+        }
+      }
+      
+      // Only allow clicking in normal quiz mode
+      if (!QuizModule.isShowingAnswers && !QuizModule.showAnswersMode) {
+        div.onclick = () => selectAnswer(opt, q, correctAnswer);
+        
+        // Add keyboard support
+        div.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            selectAnswer(opt, q, correctAnswer);
+          }
+        });
+      }
+      
+      optionsContainer.appendChild(div);
+    });
+    
+    // Show correct answer message if appropriate
+    if (QuizModule.isShowingAnswers || 
+        (userAnswerForThisQ !== null && userAnswerForThisQ !== undefined && userAnswerForThisQ === correctAnswer)) {
+      document.getElementById("correct-answer-message").textContent = `RIGHT ANSWER: ${correctAnswer}`;
+      document.getElementById("correct-answer-message").style.display = "block";
+    } else {
+      document.getElementById("correct-answer-message").style.display = "none";
+    }
+    
+    QuizModule.updateScore();
+    QuizModule.updateProgressBar();
+    document.getElementById("goto-number").max = currentQuestions.length;
+  },
+  
+  toggleHelp: function() {
+    const helpBox = document.getElementById("helpBox");
+    if (helpBox.style.display === "none") {
+      helpBox.style.display = "block";
+    } else {
+      helpBox.style.display = "none";
+    }
+  },
+  
+  toggleHint: function() {
+    const currentQuestions = QuizModule.isShowingAnswers ? QuizModule.allQuestions : QuizModule.questions;
+    const q = currentQuestions[QuizModule.currentQuestionIndex];
+    const originalQ = QuizModule.allQuestions.find(oq => oq.question === q.question);
+    const questionIndex = QuizModule.allQuestions.indexOf(originalQ) + 1;
+    
+    const hintContainer = document.getElementById("hint-container");
+    const hintText = document.getElementById("hint-text");
+    
+    // Toggle hint visibility
+    QuizModule.isHintVisible = !QuizModule.isHintVisible;
+    
+    if (QuizModule.isHintVisible) {
+      if (QuizModule.hints[questionIndex]) {
+        hintText.textContent = QuizModule.hints[questionIndex];
+      } else {
+        hintText.textContent = "No hint available for this question.";
+      }
+      hintContainer.style.display = "block";
+    } else {
+      hintContainer.style.display = "none";
+    }
+  },
+  
+  toggleTheme: function() {
+    // Move to the next theme
+    this.currentThemeIndex = (this.currentThemeIndex + 1) % this.themes.length;
+    const selectedTheme = this.themes[this.currentThemeIndex];
+    
+    // Remove all theme classes
+    this.themes.forEach(theme => {
+      document.body.classList.remove(theme.name);
+    });
+    
+    // Add the selected theme class
+    document.body.classList.add(selectedTheme.name);
+    
+    // Update the theme toggle icon
+    document.getElementById("theme-toggle").textContent = selectedTheme.icon;
+    
+    // Save the theme preference
+    try {
+      localStorage.setItem(THEME_KEY, this.currentThemeIndex.toString());
+    } catch (error) {
+      Logger.error("Error saving theme preference", error);
+    }
+  },
+  
+  loadThemePreference: function() {
+    try {
+      const savedThemeIndex = localStorage.getItem(THEME_KEY);
+      if (savedThemeIndex !== null) {
+        this.currentThemeIndex = parseInt(savedThemeIndex);
+        const selectedTheme = this.themes[this.currentThemeIndex];
+        
+        // Remove all theme classes
+        this.themes.forEach(theme => {
+          document.body.classList.remove(theme.name);
+        });
+        
+        // Add the selected theme class
+        document.body.classList.add(selectedTheme.name);
+        
+        // Update the theme toggle icon
+        document.getElementById("theme-toggle").textContent = selectedTheme.icon;
+      }
+    } catch (error) {
+      Logger.error("Error loading theme preference", error);
+    }
+  },
+  
+  updateZoom: function(zoomValue) {
+    // Apply zoom to the quiz section
+    const quizSection = document.getElementById('quiz-section');
+    const zoomPercentage = zoomValue / 100;
+    
+    // Apply the zoom using transform scale
+    quizSection.style.transform = `scale(${zoomPercentage})`;
+    quizSection.style.transformOrigin = 'top center';
+    
+    // Update the zoom value display
+    document.getElementById('zoom-value').textContent = `${zoomValue}%`;
+    
+    // Save the zoom preference
+    try {
+      localStorage.setItem(ZOOM_KEY, zoomValue.toString());
+    } catch (error) {
+      Logger.error("Error saving zoom preference", error);
+    }
+  },
+  
+  resetZoom: function() {
+    // Reset zoom to 100%
+    this.updateZoom(100);
+    document.getElementById('zoom-slider').value = 100;
+  },
+  
+  loadZoomPreference: function() {
+    try {
+      const savedZoom = localStorage.getItem(ZOOM_KEY);
+      if (savedZoom !== null) {
+        const zoomValue = parseInt(savedZoom);
+        // Validate the zoom value is within range
+        if (zoomValue >= 50 && zoomValue <= 150) {
+          this.updateZoom(zoomValue);
+          document.getElementById('zoom-slider').value = zoomValue;
+        }
+      }
+    } catch (error) {
+      Logger.error("Error loading zoom preference", error);
+    }
+  }
+};
+
+// ====================== TIMER MODULE ======================
+const TimerModule = {
+  initialTime: 5 * 60, // 5 minutes in seconds
+  timeLeft: 0,
+  timerInterval: null,
+  testStartTime: null,
+  isLoggedIn: false,
+  
+  init: function() {
+    Logger.info("Initializing timer module");
+    
+    this.timeLeft = this.initialTime;
+    this.updateTimerDisplay();
+    
+    document.getElementById("startButton").addEventListener("click", () => this.startTimer());
+    document.getElementById("endButton").addEventListener("click", () => this.endTimer());
+    document.getElementById("resetButton").addEventListener("click", () => this.resetTimer());
+  },
+  
+  formatTime: function(seconds) {
+    const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
+    const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+    const secs = String(seconds % 60).padStart(2, '0');
+    return `${hrs}:${mins}:${secs}`;
+  },
+  
+  updateTimerDisplay: function() {
+    document.getElementById("timer").textContent = this.formatTime(this.timeLeft);
+  },
+  
+  guardTimerAccess: function(action) {
+    if (!this.isLoggedIn) {
+      alert("Please log in to use the timer.");
+      return false;
+    }
+    return true;
+  },
+  
+  startTimer: function() {
+    if (!this.guardTimerAccess("start")) return;
+    
+    Logger.info("Starting timer");
+    
+    clearInterval(this.timerInterval);
+    this.testStartTime = new Date();
+    
+    this.timerInterval = setInterval(() => {
+      if (this.timeLeft <= 0) {
+        clearInterval(this.timerInterval);
+        this.updateTimerDisplay();
+        alert("Time's up!");
+      } else {
+        this.timeLeft--;
+        this.updateTimerDisplay();
+      }
+    }, 1000);
+  },
+  
+  endTimer: function() {
+    if (!this.guardTimerAccess("end")) return;
+    
+    Logger.info("Ending timer");
+    
+    clearInterval(this.timerInterval);
+  },
+  
+  resetTimer: function() {
+    if (!this.guardTimerAccess("reset")) return;
+    
+    Logger.info("Resetting timer");
+    
+    clearInterval(this.timerInterval);
+    this.timeLeft = this.initialTime;
+    this.testStartTime = null;
+    this.updateTimerDisplay();
+  },
+  
+  setLoginStatus: function(status) {
+    this.isLoggedIn = status;
+  }
+};
+
+// ====================== SPEECH MODULE ======================
+const SpeechModule = {
+  synth: null,
+  currentUtterance: null,
+  resolvePausePromise: null,
+  resolveBreakPromise: null,
+  
+  init: function() {
+    Logger.info("Initializing speech module");
+    
+    this.synth = window.speechSynthesis;
+    
+    if (!this.synth) {
+      Logger.warn("Text-to-speech not supported in this browser");
+    }
+  },
+  
+  speakText: function(text) {
+    return new Promise((resolve, reject) => {
+      if (!this.synth) {
+        Logger.warn("Text-to-speech not supported");
+        resolve();
+        return;
+      }
+      
+      if (QuizModule.isBreaking) {
+        resolve();
+        return;
+      }
+      
+      let textToSpeak = text;
+      textToSpeak = textToSpeak.replace(/<br>/g, ', ');
+      textToSpeak = textToSpeak.replace(/([A-Z])\./g, '$1,');
+      
+      this.synth.cancel();
+      this.currentUtterance = new SpeechSynthesisUtterance(textToSpeak);
+      
+      this.currentUtterance.onend = () => {
+        QuizModule.isSpeaking = false;
+        this.currentUtterance = null;
+        resolve();
+      };
+      
+      this.currentUtterance.onerror = (event) => {
+        Logger.error("Speech synthesis error", event);
+        QuizModule.isSpeaking = false;
+        this.currentUtterance = null;
+        resolve();
+      };
+      
+      QuizModule.isSpeaking = true;
+      this.synth.speak(this.currentUtterance);
+    });
+  },
+  
+  toggleAudioPause: function() {
+    const pauseBtn = document.getElementById("pauseAudioBtn");
+    if (pauseBtn.disabled || !this.synth) {
+      return;
+    }
+    
+    if (this.synth.speaking || this.synth.paused) {
+      if (this.synth.paused) {
+        this.synth.resume();
+        QuizModule.isAudioPaused = false;
+        pauseBtn.innerHTML = "<u>A</u>udio Pause/Resume";
+        
+        if (this.resolvePausePromise) {
+          this.resolvePausePromise();
+          this.resolvePausePromise = null;
+        }
+      } else {
+        this.synth.pause();
+        QuizModule.isAudioPaused = true;
+        pauseBtn.innerHTML = "<u>A</u>udio Resume";
+      }
+    }
+  },
+  
+  breakReadAllAnswers: function() {
+    if (!QuizModule.showAnswersMode) return;
+    
+    Logger.info("Breaking read all answers");
+    
+    QuizModule.isBreaking = true;
+    this.synth.cancel();
+    this.currentUtterance = null;
+    QuizModule.isSpeaking = false;
+    
+    if (this.resolvePausePromise) {
+      this.resolvePausePromise();
+      this.resolvePausePromise = null;
+    }
+    
+    if (this.resolveBreakPromise) {
+      this.resolveBreakPromise();
+      this.resolveBreakPromise = null;
+    }
+  }
+};
+
+// ====================== MAIN FUNCTIONS ======================
+function selectAnswer(opt, q, correctAnswer) {
+  Logger.debug(`Answer selected: ${opt}`);
+  
+  // If the test is already completed, do nothing
+  if (QuizModule.isTestCompleted) {
+    return;
+  }
+  
+  if (QuizModule.currentQuestionIndex === QuizModule.questions.length - 1) {
+    // This is the last question
+    Logger.info("Last question answered");
+  }
+  
+  const shuffledIndex = QuizModule.questions.findIndex(sq => sq.question === q.question);
+  
+  if (shuffledIndex !== -1) {
+    QuizModule.userAnswersShuffled[shuffledIndex] = opt;
+    clearPreviousHighlight(document.getElementById("answer-options"));
+    
+    const options = document.querySelectorAll('.answer');
+    options.forEach(option => {
+      if (option.getAttribute('data-option') === opt) {
+        if (opt === correctAnswer) {
+          option.classList.add("correct");
+          option.setAttribute("aria-checked", "true");
+          
+          document.getElementById("correct-answer-message").textContent = `RIGHT ANSWER: ${correctAnswer}`;
+          document.getElementById("correct-answer-message").style.display = "block";
+          
+          // Auto-advance after delay if not the last question
+          if (QuizModule.currentQuestionIndex < QuizModule.questions.length - 1) {
+            setTimeout(() => {
+              QuizModule.currentQuestionIndex++;
+              UIModule.showQuestion();
+            }, ANSWER_DELAY_MS);
+          } else {
+            // This is the last question and it was answered correctly
+            QuizModule.completeTest();
+          }
+        } else {
+          option.classList.add("incorrect");
+          option.setAttribute("aria-checked", "false");
+          
+          // If this is the last question and answered incorrectly, still complete the test
+          if (QuizModule.currentQuestionIndex === QuizModule.questions.length - 1) {
+            QuizModule.completeTest();
+          }
+        }
+      }
+    });
+    
+    QuizModule.updateScore();
+  }
+}
+
+function clearPreviousHighlight(container) {
+  Array.from(container.children).forEach(child => {
+    child.classList.remove("selected", "correct", "incorrect");
+    child.setAttribute("aria-checked", "false");
+  });
+}
+
+function nextQuestion() {
+  if (QuizModule.showAnswersMode || QuizModule.isSpeaking) return;
+  
+  Logger.debug("Moving to next question");
+  
+  const currentQuestions = QuizModule.isShowingAnswers ? QuizModule.allQuestions : QuizModule.questions;
+  
+  if (QuizModule.currentQuestionIndex < currentQuestions.length - 1) {
+    QuizModule.currentQuestionIndex++;
+    UIModule.showQuestion();
+  }
+}
+
+function prevQuestion() {
+  if (QuizModule.showAnswersMode || QuizModule.isSpeaking) return;
+  
+  Logger.debug("Moving to previous question");
+  
+  const currentQuestions = QuizModule.isShowingAnswers ? QuizModule.allQuestions : QuizModule.questions;
+  
+  if (QuizModule.currentQuestionIndex > 0) {
+    QuizModule.currentQuestionIndex--;
+    UIModule.showQuestion();
+  }
+}
+
+function gotoQuestion() {
+  if (document.getElementById("quiz-section").classList.contains("hidden")) return;
+  if (QuizModule.showAnswersMode || QuizModule.isSpeaking) return;
+  
+  const val = parseInt(document.getElementById("goto-number").value);
+  const targetIndex = val - 1;
+  const currentQuestions = QuizModule.isShowingAnswers ? QuizModule.allQuestions : QuizModule.questions;
+  
+  if (!isNaN(val) && targetIndex >= 0 && targetIndex < currentQuestions.length) {
+    QuizModule.currentQuestionIndex = targetIndex;
+    UIModule.showQuestion();
+  } else if (!isNaN(val)) {
+    alert(`Enter a number between 1 and ${currentQuestions.length}`);
+  }
+  
+  document.getElementById("goto-number").value = "";
+}
+
+function restartQuiz() {
+
+// Remove blinking class when restarting
+document.getElementById("result-message").classList.remove("blinking");
+document.getElementById("completion-message").classList.remove("blinking");
+
+
+  if (QuizModule.showAnswersMode || QuizModule.isSpeaking) return;
+  
+  Logger.info("Restarting quiz");
+  
+  QuizModule.questions = [...QuizModule.allQuestions];
+  QuizModule.shuffleArray(QuizModule.questions);
+  QuizModule.clearProgress();
+  QuizModule.init();
+  
+  // Reset timer
+  TimerModule.resetTimer();
+
+}
+
+function showResult() {
+  const showResultBtnInsideH3 = document.getElementById('showResultBtn-inside-h3');
+  if (showResultBtnInsideH3 && showResultBtnInsideH3.disabled) {
+    return;
+  }
+  
+  if (QuizModule.showAnswersMode || QuizModule.isSpeaking) return;
+  
+  Logger.info("Showing quiz result");
+  
+  QuizModule.updateScore();
+  
+  const scoreTextElement = document.getElementById("score-display-inside-h3");
+  const scoreText = scoreTextElement ? scoreTextElement.textContent : "Score: N/A";
+/*  
+  document.getElementById("result-message").textContent =
+    `🎉 Congratulations! You have scored ${scoreText.replace("Score: ", "")}.`;
+*/
+
+/*
+const timerValue = document.getElementById("timer").textContent;
+document.getElementById("result-message").innerHTML = 
+  `🎉 Congratulations! You have scored ${scoreText.replace("Score: ", "")}.<br>` +
+  `You have completed the Test in ${timerValue}!`;
+*/
+
+// Get the timer value
+const timerText = document.getElementById("timer").textContent;
+
+// Calculate the actual time taken
+const [hours, minutes, seconds] = timerText.split(':').map(Number);
+const remainingSeconds = hours * 3600 + minutes * 60 + seconds;
+const totalSeconds = 5 * 60; // 5 minutes total
+const elapsedSeconds = totalSeconds - remainingSeconds;
+
+// Format the time properly
+const h = Math.floor(elapsedSeconds / 3600).toString().padStart(2, '0');
+const m = Math.floor((elapsedSeconds % 3600) / 60).toString().padStart(2, '0');
+const s = (elapsedSeconds % 60).toString().padStart(2, '0');
+const formattedTime = `${h}:${m}:${s}`;
+
+// Show both messages
+document.getElementById("result-message").innerHTML = 
+  `🎉 Congratulations! You have scored ${scoreText.replace("Score: ", "")}.<br>` +
+  `You have completed the Test in ${formattedTime}!`;
+
+document.getElementById("result-message").classList.add("blinking");
+
+resultMessageEl.classList.add("blinking"); // Add blinking class
+document.getElementById("result-message").classList.add("blinking");
+}
+
+let showAnswersInterval;
+
+function toggleShowAnswers() {
+  if (QuizModule.showAnswersMode || QuizModule.isSpeaking) return;
+  
+  Logger.info("Toggling show answers mode");
+  
+  QuizModule.isShowingAnswers = !QuizModule.isShowingAnswers;
+  
+  if (QuizModule.isShowingAnswers) {
+    QuizModule.currentQuestionIndex = 0;
+    UIModule.showQuestion();
+    
+    showAnswersInterval = setInterval(() => {
+      if (!QuizModule.isShowingAnswers) {
+        clearInterval(showAnswersInterval);
+        return;
+      }
+      
+      if (QuizModule.currentQuestionIndex < QuizModule.allQuestions.length - 1) {
+        QuizModule.currentQuestionIndex++;
+        UIModule.showQuestion();
+      } else {
+        QuizModule.isShowingAnswers = false;
+        
+        setTimeout(() => {
+          clearInterval(showAnswersInterval);
+          QuizModule.questions = [...QuizModule.allQuestions];
+          QuizModule.shuffleArray(QuizModule.questions);
+          QuizModule.currentQuestionIndex = 0;
+          QuizModule.userAnswersShuffled = Array(QuizModule.questions.length).fill(null);
+          QuizModule.updateScore();
+          UIModule.showQuestion();
+        }, 100);
+      }
+    }, AUTO_ADVANCE_DELAY_MS);
+  } else {
+    clearInterval(showAnswersInterval);
+    
+    QuizModule.questions = [...QuizModule.allQuestions];
+    QuizModule.shuffleArray(QuizModule.questions);
+    QuizModule.currentQuestionIndex = 0;
+    QuizModule.userAnswersShuffled = Array(QuizModule.questions.length).fill(null);
+    QuizModule.updateScore();
+    UIModule.showQuestion();
+  }
+}
+
+async function readAllAnswers() {
+  if (!SpeechModule.synth) {
+    alert("Text-to-speech is not supported in your browser.");
+    return;
+  }
+  
+  Logger.info("Starting read all answers mode");
+  
+  document.getElementById("readAllAnswersBtn").disabled = true;
+  
+  QuizModule.showAnswersMode = true;
+  QuizModule.isShowingAnswers = false;
+  QuizModule.isAudioPaused = false;
+  QuizModule.isBreaking = false;
+  SpeechModule.resolvePausePromise = null;
+  SpeechModule.resolveBreakPromise = null;
+  
+  // Disable all controls except pause and break
+  const controls = document.getElementById("controls").querySelectorAll("button, input");
+  controls.forEach(control => {
+    if (control.id !== "pauseAudioBtn" && 
+        control.id !== "breakBtn" && 
+        control.id !== "readAllAnswersBtn") {
+      control.disabled = true;
+    }
+  });
+  
+  const showResultBtnInsideH3 = document.getElementById('showResultBtn-inside-h3');
+  if (showResultBtnInsideH3) {
+    showResultBtnInsideH3.disabled = true;
+  }
+  
+  document.getElementById("pauseAudioBtn").disabled = false;
+  document.getElementById("pauseAudioBtn").innerHTML = "<u>A</u>udio Pause/Resume";
+  document.getElementById("breakBtn").disabled = false;
+  document.getElementById("breakBtn").innerHTML = "<u>B</u>reak";
+  
+  const answersToDisplay = QuizModule.allQuestions;
+  
+  for (let i = 0; i < answersToDisplay.length; i++) {
+    if (QuizModule.isBreaking) {
+      break;
+    }
+    
+    while (QuizModule.isAudioPaused || QuizModule.isSpeaking) {
+      if (QuizModule.isBreaking) {
+        break;
+      }
+      
+      await new Promise(resolve => {
+        SpeechModule.resolvePausePromise = resolve;
+        SpeechModule.resolveBreakPromise = resolve;
+      });
+    }
+    
+    if (QuizModule.isBreaking) {
+      break;
+    }
+    
+    // Update progress bar for each question in Listen Answers mode
+    QuizModule.currentQuestionIndex = i;
+    QuizModule.updateProgressBar();
+    
+    const q = answersToDisplay[i];
+    
+    const questionDisplayArea = document.getElementById("question-display-area");
+    questionDisplayArea.innerHTML = "";
+    
+    // Create the h3 element for the question number
+    const questionNumberH3 = document.createElement('h3');
+    questionNumberH3.textContent = `Q${i + 1}:`;
+    
+    // Create the score display div to go inside the h3
+    const scoreDisplayDiv = document.createElement('div');
+    scoreDisplayDiv.id = 'score-display-inside-h3';
+    
+    // Create the Test Result button to go inside the h3
+    const showResultBtn = document.createElement('button');
+    showResultBtn.id = 'showResultBtn-inside-h3';
+    showResultBtn.innerHTML = '<u>T</u>est Result';
+    showResultBtn.onclick = showResult;
+    showResultBtn.disabled = true;
+    
+    // Append the score display and test result button to the h3
+    questionNumberH3.appendChild(scoreDisplayDiv);
+    questionNumberH3.appendChild(showResultBtn);
+    
+    // Append the h3 to the question display area
+    questionDisplayArea.appendChild(questionNumberH3);
+    
+    // Update score display
+    let correctDuringRead = 0;
+    const correspondingShuffledIndex = QuizModule.questions.findIndex(sq => sq.question === q.question);
+    if (correspondingShuffledIndex !== -1 && 
+        QuizModule.userAnswersShuffled[correspondingShuffledIndex] === q.answer) {
+      correctDuringRead = 1;
+    }
+    scoreDisplayDiv.textContent = `Score: ${correctDuringRead} / ${answersToDisplay.length}`;
+    
+    const questionPartsContainer = document.createElement('div');
+    questionPartsContainer.classList.add('question-parts-container');
+    questionDisplayArea.appendChild(questionPartsContainer);
+    
+    let textToSpeak = `Question ${i + 1}: `;
+    if (q.question) {
+      const singleQuestionElement = document.createElement('p');
+      singleQuestionElement.innerHTML = q.question;
+      questionPartsContainer.appendChild(singleQuestionElement);
+      textToSpeak += q.question;
+    }
+    
+    const questionImageDiv = document.createElement('div');
+    questionImageDiv.id = 'question-image';
+    questionImageDiv.style.display = "none";
+    questionDisplayArea.appendChild(questionImageDiv);
+    
+    if (q.image) {
+      const img = document.createElement("img");
+      img.src = q.image;
+      img.alt = `Image for question ${i + 1}`;
+      questionImageDiv.appendChild(img);
+      questionImageDiv.style.display = "block";
+      textToSpeak += " (Image is displayed)";
+    }
+    
+    const optionsContainer = document.getElementById("answer-options");
+    optionsContainer.innerHTML = "";
+    document.getElementById("correct-answer-message").textContent = "";
+    document.getElementById("correct-answer-message").style.display = "none";
+    
+    const currentOptions = q.options;
+    
+    currentOptions.forEach(opt => {
+      const div = document.createElement("div");
+      div.innerHTML = opt;
+      div.className = "answer";
+      
+      if (opt === q.answer) {
+        div.classList.add("correct");
+        textToSpeak += ` Correct answer: ${opt}`;
+      }
+      
+      optionsContainer.appendChild(div);
+    });
+    
+    document.getElementById("correct-answer-message").textContent = `RIGHT ANSWER: ${q.answer}`;
+    document.getElementById("correct-answer-message").style.display = "block";
+    
+    // Speak the question and answer
+    try {
+      await SpeechModule.speakText(textToSpeak);
+    } catch (error) {
+      Logger.error("Error during speech synthesis", error);
+    }
+    
+// Wait before moving to next question (ZERO delay for LISTEN ANSWERS)
+if (i < answersToDisplay.length - 1) {
+  await new Promise(resolve => {
+    setTimeout(resolve, LISTEN_ANSWERS_DELAY_MS); // Use zero delay
+  });
+}
+  }
+  
+  // Re-enable controls
+  document.getElementById("readAllAnswersBtn").disabled = false;
+  document.getElementById("pauseAudioBtn").disabled = true;
+  document.getElementById("breakBtn").disabled = true;
+  
+  controls.forEach(control => {
+    control.disabled = false;
+  });
+  
+  if (showResultBtnInsideH3) {
+    showResultBtnInsideH3.disabled = false;
+  }
+  
+  QuizModule.showAnswersMode = false;
+  QuizModule.isBreaking = false;
+  
+  // Return to shuffled quiz
+  QuizModule.questions = [...QuizModule.allQuestions];
+  QuizModule.shuffleArray(QuizModule.questions);
+  QuizModule.currentQuestionIndex = 0;
+  QuizModule.userAnswersShuffled = Array(QuizModule.questions.length).fill(null);
+  QuizModule.updateScore();
+  UIModule.showQuestion();
+}
+
+function toggleTheme() {
+    const body = document.body;
+    const themes = ['theme-light', 'theme-dark', 'theme-blue', 'theme-green', 'theme-purple', 'theme-red', 'theme-orange', 'theme-teal', 'theme-indigo', 'theme-pink', 'theme-amber', 'theme-cyan', 'theme-lime'];
+    
+    // Find current theme
+    let currentTheme = '';
+    for (const theme of themes) {
+        if (body.classList.contains(theme)) {
+            currentTheme = theme;
+            break;
+        }
+    }
+    
+    // Find next theme
+    const currentIndex = themes.indexOf(currentTheme);
+    const nextIndex = (currentIndex + 1) % themes.length;
+    const nextTheme = themes[nextIndex];
+    
+    // Remove current theme and add next theme
+    if (currentTheme) {
+        body.classList.remove(currentTheme);
+    }
+    body.classList.add(nextTheme);
+    
+    // Save to localStorage
+    localStorage.setItem(THEME_KEY, nextTheme);
+    
+    // Update zoom controller theme if it exists
+    const zoomContainer = document.getElementById('zoom-container');
+    if (zoomContainer) {
+        // Remove all theme classes from zoom container
+        zoomContainer.className = '';
+        // Apply current theme to zoom container
+        zoomContainer.classList.add(nextTheme + '-zoom');
+    }
+}
+
+
+function toggleHelp() {
+  UIModule.toggleHelp();
+}
+
+function toggleHint() {
+  UIModule.toggleHint();
+}
+
+function toggleAudioPause() {
+  SpeechModule.toggleAudioPause();
+}
+
+function breakReadAllAnswers() {
+  SpeechModule.breakReadAllAnswers();
+}
+
+function updateZoom(value) {
+  UIModule.updateZoom(value);
+}
+
+function resetZoom() {
+  UIModule.resetZoom();
+}
+
+function handleEnterKey(event) {
+  if (event.key === "Enter") {
+    verifyCode();
+  }
+}
+
+async function verifyCode() {
+  const codeInput = document.getElementById("access-code").value.trim();
+  
+  try {
+    // In a real application, this would be a server request
+    // For demo purposes, we'll simulate it with a timeout
+    const isValid = await new Promise(resolve => {
+      setTimeout(() => {
+        resolve(codeInput === ACCESS_CODE);
+      }, 500);
+    });
+    
+    if (isValid) {
+      Logger.info("Access code verified successfully");
+      
+      document.getElementById("login-section").classList.add("hidden");
+      document.getElementById("quiz-section").classList.remove("hidden");
+      
+      TimerModule.setLoginStatus(true);
+      QuizModule.init();
+    } else {
+      Logger.warn("Invalid access code entered");
+      
+      alert("Invalid Access Code. Please try again.");
+      document.getElementById("access-code").value = "";
+    }
+  } catch (error) {
+    Logger.error("Error verifying access code", error);
+    
+    alert("Error verifying access code. Please try again.");
+    document.getElementById("access-code").value = "";
+  }
+}
+
+// ====================== INITIALIZATION ======================
+document.addEventListener("DOMContentLoaded", function() {
+  Logger.info("Application initializing");
+  
+  // Initialize modules
+  QuizModule.init();
+  TimerModule.init();
+  SpeechModule.init();
+  
+  // Load preferences
+  UIModule.loadThemePreference();
+  UIModule.loadZoomPreference();
+  
+  // Add keyboard shortcuts
+  document.addEventListener('keydown', function(e) {
+    // Only process shortcuts if quiz is active
+    if (document.getElementById("quiz-section").classList.contains("hidden")) return;
+    
+    // Number keys 1-4 for selecting answers
+    if (e.key >= '1' && e.key <= '4') {
+      const options = document.querySelectorAll('.answer');
+      const index = parseInt(e.key) - 1;
+      
+      if (index < options.length && !QuizModule.isShowingAnswers && !QuizModule.showAnswersMode) {
+        options[index].click();
+      }
+    }
+    
+    // Other shortcuts
+    switch(e.key.toLowerCase()) {
+      case 'p': // Previous
+        if (!e.ctrlKey && !e.altKey) {
+          prevQuestion();
+        }
+        break;
+      case 'n': // Next
+        if (!e.ctrlKey && !e.altKey) {
+          nextQuestion();
+        }
+        break;
+      case 'g': // Go to question
+        if (!e.ctrlKey && !e.altKey) {
+          gotoQuestion();
+        }
+        break;
+      case 'r': // Restart
+        if (!e.ctrlKey && !e.altKey) {
+          restartQuiz();
+        }
+        break;
+      case 's': // Show answers
+        if (!e.ctrlKey && !e.altKey) {
+          toggleShowAnswers();
+        }
+        break;
+      case 'h': // Help
+        if (!e.ctrlKey && !e.altKey) {
+          toggleHelp();
+        }
+        break;
+      case 'i': // Hint
+        if (!e.ctrlKey && !e.altKey) {
+          toggleHint();
+        }
+        break;
+      case 'l': // Listen answers
+        if (!e.ctrlKey && !e.altKey) {
+          readAllAnswers();
+        }
+        break;
+      case 'a': // Audio pause/resume
+        if (!e.ctrlKey && !e.altKey) {
+          toggleAudioPause();
+        }
+        break;
+      case 'b': // Break
+        if (!e.ctrlKey && !e.altKey) {
+          breakReadAllAnswers();
+        }
+        break;
+      case 't': // Test result
+        if (!e.ctrlKey && !e.altKey) {
+          showResult();
+        }
+        break;
+    }
+  });
+  
+  Logger.info("Application initialized successfully");
+});
+
+// Toggle zoom controller visibility
+function toggleZoomController() {
+    const zoomContainer = document.getElementById('zoom-container');
+    const zoomToggleBtn = document.getElementById('zoomToggleBtn');
+    
+    if (zoomContainer.style.display === 'none' || zoomContainer.style.display === '') {
+        zoomContainer.style.display = 'flex';
+        zoomToggleBtn.textContent = 'Zoom ON';
+        zoomToggleBtn.style.backgroundColor = '#28a745'; /* Green when active */
+        
+        // Apply current theme to zoom container
+        const bodyClass = document.body.className;
+        if (bodyClass.includes('theme-')) {
+            const currentTheme = bodyClass.split(' ').find(cls => cls.startsWith('theme-'));
+            if (currentTheme) {
+                zoomContainer.className = currentTheme + '-zoom';
+            }
+        }
+    } else {
+        zoomContainer.style.display = 'none';
+        zoomToggleBtn.textContent = 'Zoom OFF';
+        zoomToggleBtn.style.backgroundColor = ''; /* Reset to default */
+    }
+}
+
+// Initialize theme on page load
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem(THEME_KEY);
+    if (savedTheme) {
+        // Apply saved theme
+        document.body.className = savedTheme;
+        
+        // Update zoom controller theme if it exists
+        const zoomContainer = document.getElementById('zoom-container');
+        if (zoomContainer) {
+            zoomContainer.className = savedTheme + '-zoom';
+        }
+    }
+});
+
+/*
+function printMCQs() {
+  // Create print section if it doesn't exist
+  let printSection = document.getElementById('print-section');
+  
+  if (!printSection) {
+    printSection = document.createElement('div');
+    printSection.id = 'print-section';
+    document.body.appendChild(printSection);
+  }
+  
+  // Clear previous content
+  printSection.innerHTML = '';
+  
+  // Add header
+  const header = document.createElement('h1');
+  header.textContent = 'CSEET e-Bulletin July 2025 MCQs';
+  printSection.appendChild(header);
+  
+  // Add all questions
+  QuizModule.allQuestions.forEach((q, index) => {
+    const questionDiv = document.createElement('div');
+    questionDiv.className = 'question';
+    
+    const questionText = document.createElement('div');
+    questionText.className = 'question-text';
+    questionText.textContent = `Q${index + 1}: ${q.question}`;
+    questionDiv.appendChild(questionText);
+    
+    const optionsDiv = document.createElement('div');
+    optionsDiv.className = 'options';
+    
+    q.options.forEach(option => {
+      const optionDiv = document.createElement('div');
+      optionDiv.className = 'option';
+      optionDiv.textContent = option;
+      optionsDiv.appendChild(optionDiv);
+    });
+    
+    questionDiv.appendChild(optionsDiv);
+    
+    const answerDiv = document.createElement('div');
+    answerDiv.className = 'answer';
+    answerDiv.textContent = `Answer: ${q.answer}`;
+    questionDiv.appendChild(answerDiv);
+    
+    printSection.appendChild(questionDiv);
+  });
+  
+  // Print the section
+  window.print();
+}
+*/
+
+function printMCQs() {
+    const printWindow = window.open('', '_blank');
+    printWindow.document.write('<html><head><title>MCQs PDF</title></head><body>');
+    printWindow.document.write('<h1 style="text-align:center;">CSEET e-Bulletin – July 2025 MCQs</h1>');
+
+    if (QuizModule?.allQuestions?.length > 0) {
+        QuizModule.allQuestions.forEach((q, index) => {
+            printWindow.document.write(`<p><strong>${index + 1}. ${q.question}</strong></p>`);
+            q.options.forEach(opt => {
+                printWindow.document.write(`<p style="margin-left:20px;">${opt}</p>`);
+            });
+            printWindow.document.write(`<p><strong>Answer: ${q.answer}</strong></p><hr>`);
+        });
+    } else {
+        printWindow.document.write('<p>No questions loaded.</p>');
+    }
+
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.focus();
+    printWindow.print();
+}
+
+</script>
+
+<script>
+/*
+function printMCQs() {
+  const printSection = document.getElementById("print-section") || (() => {
+    const sec = document.createElement("div");
+    sec.id = "print-section";
+    document.body.appendChild(sec);
+    return sec;
+  })();
+
+  printSection.innerHTML = "";
+
+  // Heading
+  const heading = document.createElement("h1");
+  heading.textContent = "CSEET e-Bulletin – July 2025 MCQs";
+  printSection.appendChild(heading);
+
+  // Print from allQuestions dataset
+  if (QuizModule?.allQuestions?.length > 0) {
+    QuizModule.allQuestions.forEach((q, index) => {
+      const questionDiv = document.createElement("div");
+      questionDiv.className = "question";
+
+      const qText = document.createElement("div");
+      qText.className = "question-text";
+      qText.textContent = `${index + 1}. ${q.question}`;
+      questionDiv.appendChild(qText);
+
+      const optionsDiv = document.createElement("div");
+      optionsDiv.className = "options";
+      q.options.forEach(option => {
+        const optDiv = document.createElement("div");
+        optDiv.className = "option";
+        optDiv.textContent = option;
+        optionsDiv.appendChild(optDiv);
+      });
+      questionDiv.appendChild(optionsDiv);
+
+      const ansDiv = document.createElement("div");
+      ansDiv.className = "answer";
+      ansDiv.style.fontWeight = "bold";
+      ansDiv.textContent = `Answer: ${q.answer}`;
+      questionDiv.appendChild(ansDiv);
+
+      printSection.appendChild(questionDiv);
+    });
+  } else {
+    const msg = document.createElement("p");
+    msg.textContent = "No questions found in data.";
+    printSection.appendChild(msg);
+  }
+
+  window.print();
+}
+*/
+</script>
+
+<script>
+function saveAsTXT() {
+    let content = "";
+    if (QuizModule?.allQuestions?.length > 0) {
+        QuizModule.allQuestions.forEach((q, index) => {
+            content += `${index + 1}. ${q.question}\n`;
+            q.options.forEach(opt => content += `   ${opt}\n`);
+            content += `Answer: ${q.answer}\n\n`;
+        });
+        const blob = new Blob([content], { type: "text/plain" });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "MCQs.txt";
+        link.click();
+    } else {
+        alert("Questions are not loaded yet.");
+    }
+}
+</script>
+
+</body>
+</html>
